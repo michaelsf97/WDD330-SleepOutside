@@ -30,4 +30,17 @@ function cartItemTemplate(item, index) {
   return newItem;
 }
 
+function removeFromCart(index) {
+  const cartItems = getLocalStorage("so-cart") || [];
+  cartItems.splice(index, 1);
+  setLocalStorage("so-cart", cartItems);
+  renderCartContents();
+}
+
+document.querySelector(".product-list").addEventListener("click", (e) => {
+  const button = e.target.closest(".cart-card__remove");
+  if (!button) return;
+  removeFromCart(Number(button.dataset.index));
+});
+
 renderCartContents();
