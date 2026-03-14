@@ -6,6 +6,7 @@ function renderCartContents() {
     document.querySelector(".product-list").innerHTML = "";
     return;
   }
+
   const htmlItems = cartItems.map((item, index) => cartItemTemplate(item, index));
   document.querySelector(".product-list").innerHTML = htmlItems.join("");
 }
