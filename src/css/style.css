@@ -6,7 +6,7 @@
   --secondary-color: #525b0f;
   --tertiary-color: #8a470c;
   --light-grey: #d0d0d0;
-  --dark-grey: #303030;
+  --dark-grey: #000000;
 
   /* sizes */
   --font-base: 18px;
@@ -57,7 +57,11 @@ p {
 
 .logo a {
   text-decoration: none;
-  color: var(--font-body);
+  color: var(--tertiary-color);
+}
+
+.logo a:visited {
+  color: var(--tertiary-color);
 }
 
 .hero {
@@ -123,8 +127,13 @@ button {
   text-align: center;
 }
 
+.cart a {
+  color: inherit;
+}
+
 .cart svg {
   width: 25px;
+  fill: var(--dark-grey);
 }
 
 .cart:hover svg {

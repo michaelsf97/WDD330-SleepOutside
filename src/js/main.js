@@ -32,6 +32,43 @@ async function init() {
 
     const htmlItems = visibleProducts.map(productCardTemplate).join("");
     listElement.innerHTML = htmlItems;
+    
+    // Add event listeners to product cards for interactivity
+    addProductCardEvents();
 }
 
-init();
+// EVENT 1: Mouseover event - Add visual feedback when hovering over product cards
+function addProductCardEvents() {
+    const productCards = document.querySelectorAll(".product-card");
+    
+    productCards.forEach((card) => {
+        card.addEventListener("mouseover", (e) => {
+            e.currentTarget.style.transform = "scale(1.05)";
+            e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.15)";
+        });
+        
+        // EVENT 2: Mouseout event - Remove visual feedback when leaving product cards
+        card.addEventListener("mouseout", (e) => {
+            e.currentTarget.style.transform = "scale(1)";
+            e.currentTarget.style.boxShadow = "none";
+        });
+        
+        // EVENT 3: Focus event - Add visual feedback when tabbing to product links for accessibility
+        const link = card.querySelector("a");
+        if (link) {
+            link.addEventListener("focus", (e) => {
+                e.currentTarget.style.outline = "3px solid #0066cc";
+            });
+            
+            // EVENT 4: Blur event - Remove focus style when moving away
+            link.addEventListener("blur", (e) => {
+                e.currentTarget.style.outline = "none";
+            });
+        }
+    });
+}
+
+// EVENT 5: DOMContentLoaded - Ensure all DOM elements are ready before interacting
+document.addEventListener("DOMContentLoaded", () => {
+    init();
+});
