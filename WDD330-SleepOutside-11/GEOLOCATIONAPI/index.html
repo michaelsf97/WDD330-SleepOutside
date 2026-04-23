@@ -24,8 +24,9 @@
         console.error(error);
     };
 
-        navigator.geolocation.getCurrentPosition(successCallback, errorCallback, {
-            enableHighAccuracy: false,
+
+    navigator.geolocation.getCurrentPosition(successCallback, errorCallback, {
+            enableHighAccuracy: true,
             timeout: 10000,
             maximumAge: 60000,
         });
