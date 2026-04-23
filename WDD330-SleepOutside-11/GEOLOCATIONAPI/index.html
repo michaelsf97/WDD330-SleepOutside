@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Geolocation API in JavaScript</h1>
+    <ul class="tsummary">
+        <li>allows users to provide their geographical location to web applications</li>
+        <li>simple and easy to use </li>
+        <li>only works in secure contexts (HTTPS)</li>
+    </ul>
+
+    <script>
+        const successCallback = (position) => {
+        console.log(position)
+    };
+
+    const errorCallback = (error) => {
+        console.error(error)
+    };
+
+    navigator.geolocation.getCurrentPosition(successCallback, errorCallback, {
+        enableHighAccuracy: true,
+        timeout: 5000
+    });
+    </script>
+</body>
+</html>
