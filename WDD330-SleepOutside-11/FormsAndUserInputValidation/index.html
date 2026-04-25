@@ -59,6 +59,44 @@
         });
     </script>
 
+    <form id="form">
+        <input name = "login">
+    </form>
+
+    <script>
+        alert(form.elements.login == form.login); // true
+
+        form.login.name = "username";   // Change the name of the input
+
+        // form elements updated the name
+        alert(form.element.login); // undefined
+        alert(form.elements.username); // input
+
+        // form allows both names: the new one and the old one
+        alert(form.username == form.login); // true
+    </script>
+
+
+    <style>
+      input:invalid {
+        border: 2px dashed red;
+      }
+
+      input:valid {
+        border: 2px solid black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form>
+      <label for="choose">Would you prefer a banana or a cherry?</label>
+      <input id="choose" name="i_like" />
+      <button>Submit</button>
+    </form>
+  </body>
+</html>
+
 
     
 </body>
