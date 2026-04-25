@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="myForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <br>
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" min="0" max="120" required>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <button type="submit">Enter Contest</button>
+    </form>
+
+    <script> 
+        const form = document.getElementById('myForm');
+        form.AddEventListener('submit', function(event) {
+            const email = document.getElementById('email').value;
+            const age = document.getElementById('age').value;
+        
+            if (!email || !age) {
+                event.preventDefault();
+                alert('Please fill out all fields to submit the form');
+
+            }
+            else if ( age < 18 || age > 120) {
+                event.preventDefault();
+                alert('Age must be between 18 and 120 to enter the contest');
+            }
+        });
+    </script>
+
+
+    
+</body>
+</html>
