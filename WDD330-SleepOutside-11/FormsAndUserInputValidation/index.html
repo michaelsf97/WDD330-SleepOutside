@@ -23,6 +23,22 @@
             <input type="submit" value="Subscribe!" />
         </div>
 
+        <select id="select" multiple>
+            <option value="blues" selected>Blues</option>
+            <option value="rock" selected>Rock</option>
+            <option value="jazz" selected>Jazz</option>
+            <option value="classic" selected>Classic</option>
+        </select>
+
+        <script>
+
+            let selected = Array.from(select.options)
+            .filter(option => option.selected)
+            .map(option => option.value);
+
+            alert(selected); // blues, rock 
+        </script>
+
     </form>
 
     <script> 
