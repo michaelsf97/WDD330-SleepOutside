@@ -1,0 +1,20 @@
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --error-color: #e74c3c;
+    --font-family: 'Arial', sans-serif;
+}
+
+input:valid,
+select:valid,
+textarea:valid {
+    border: 2px solid green;
+    background-color: #f0fff4;
+}
+
+input:invalid,
+select:invalid,
+textarea:invalid {
+    border: 2px solid red;
+    background-color: #f0fff4;
+}

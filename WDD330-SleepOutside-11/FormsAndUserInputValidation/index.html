@@ -3,20 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
-    <form id="myForm">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
-        <br>
-        <label for="age">Age:</label>
-        <input type="number" id="age" name="age" min="0" max="120" required>
-        <br>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+    <form action="" method="get" class="form-example">
 
-        <button type="submit">Enter Contest</button>
+        <div class="form-example">
+            <label for="name">Enter Your Name:</label>
+        <input type="text" id="name" name="name" required /> 
+        </div>
+
+        <div class="form-example">
+            <label for="email">Enter your Email:</label>
+            <input type="text" id="email" name="email" required />
+        </div>
+
+        <div class="form-example">
+            <input type="submit" value="Subscribe!" />
+        </div>
+
     </form>
 
     <script> 
