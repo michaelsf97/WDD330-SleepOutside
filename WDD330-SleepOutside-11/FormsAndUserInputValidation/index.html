@@ -11,12 +11,12 @@
 
         <div class="form-example">
             <label for="name">Enter Your Name:</label>
-        <input type="text" id="name" name="name" required /> 
+        <input type="text" id="name" name="name" placeholder="Your name" required /> 
         </div>
 
         <div class="form-example">
             <label for="email">Enter your Email:</label>
-            <input type="text" id="email" name="email" required />
+            <input type="email" id="email" name="email" placeholder="you@example.com" required />
         </div>
 
         <div class="form-example">
@@ -27,7 +27,7 @@
 
     <script> 
         const form = document.getElementById('myForm');
-        form.AddEventListener('submit', function(event) {
+        form.addEventListener('submit', function(event) {
             const email = document.getElementById('email').value;
             const age = document.getElementById('age').value;
         

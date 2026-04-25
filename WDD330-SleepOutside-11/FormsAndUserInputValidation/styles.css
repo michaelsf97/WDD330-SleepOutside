@@ -18,3 +18,18 @@ textarea:invalid {
     border: 2px solid red;
     background-color: #f0fff4;
 }
+
+
+input:required:not(:placeholder-shown):valid,
+select:required:valid,
+textarea:required:not(:placeholder-shown):valid {
+    border: 2px solid green;
+    background-color: #fff5f5;
+}
+
+input:required:not(:placeholder-shown):invalid,
+select:required:invalid,
+textarea:required:not(:placeholder-shown):invalid {
+    border: 2px solid red;
+    background-color: #fff5f5;
+}
