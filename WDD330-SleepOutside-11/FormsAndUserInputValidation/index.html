@@ -105,6 +105,29 @@
     step="1000"
     value="250000" />
     <output class="price-output" for="price"></output>
+
+    <form>
+        <label for="mail">
+            I would like to provide me with an email address:
+        </label>
+
+        <input type="email" id="mail" name="mail" required />
+        <button> Submit </button>
+    </form>
+
+    <script>
+        const mail = document.getElementById('mail');
+
+        email.addEventListener('input', (event) => {
+            if (email.validity.typeMismatch) {
+                email.setCustomValidity('I am expecting to receive a correct email address!');
+
+            }
+            else {
+                email.setCustomValidity('');
+            }
+        });
+    </script>
   </body>
 </html>
 
