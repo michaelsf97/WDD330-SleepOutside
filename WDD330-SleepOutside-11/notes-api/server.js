@@ -27,7 +27,8 @@ let products = [
   { id: 1, name: "Ajax Tent - 3 Person", brand: "Marmot", price: 199.99, category: "tents" },
   { id: 2, name: "Talus Tent - 4 Person", brand: "The North Face", price: 199.99, category: "tents" },
   { id: 3, name: "Rimrock Tent - 2 Person", brand: "The North Face", price: 179.99, category: "tents" },
-  { id: 4, name: "Alpine Guide Tent - 3 Person", brand: "The North Face", price: 349.99, category: "tents" }
+  { id: 4, name: "Alpine Guide Tent - 3 Person", brand: "The North Face", price: 349.99, category: "tents" },
+  { id: 5, name: "Smith Sleeping Tent - 8 person", brand: "Smith", price: 499.99, category: "tents" }
 ];
 
 // GET all products
@@ -238,4 +239,29 @@ app.delete("/notes/:id", (req, res) => {
 
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
+});
+
+
+const url = 'https://pokeapi.co/api/vs/pokemon/1';
+const options = {
+  method: 'GET',
+  headers: {
+    'Content-Type': 'application/json',
+    'Accept': 'application/json',
+  }
+};
+fetch(url, options)
+.then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+})
+.then(data => {
+  console.log('first: ', data);
+  console.log('second: ', data.name);
+})
+
+.catch(error => {
+  console.error('There was a problem with the fetch operation:', error);
 });
