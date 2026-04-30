@@ -41,31 +41,31 @@ body {
 
 .itm111 {
 	background-color: #4caf50; /* green */
-	animation-delay: 0s;
+	animation-delay: 0.1s;
 	--target-height: 130px;
 }
 
 .wdd330 {
 	background-color: #2196f3; /* blue */
-	animation-delay: 0.2s;
+	animation-delay: 0.3s;
 	--target-height: 200px;
 }
 
 .cse340 {
 	background-color: #ff9800; /* orange */
-	animation-delay: 0.4s;
+	animation-delay: 0.7s;
 	--target-height: 190px;
 }
 
 .cse341 {
 	background-color: #9c27b0; /* purple */
-	animation-delay: 0.6s;
+	animation-delay: 0.9s;
 	--target-height: 210px;
 }
 
 .wdd430 {
 	background-color: #f44336; /* red */
-	animation-delay: 0.8s;
+	animation-delay: 1.2s;
 	--target-height: 100px;
 }
 
